@@ -5,8 +5,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
-def index_view(request:HttpRequest)-> HttpResponse:
-    return render(request, "index.html")
 
 def storefront_page(request:HttpRequest)-> HttpResponse:
     return render(request, "storefront.html")

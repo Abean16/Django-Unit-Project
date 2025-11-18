@@ -1,6 +1,14 @@
 {%extends 'base.html'%}
 {%load static%}
     {%block content%}
+
+    <head>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <title>Register</title>
+    </head>
+
+
+    <body>
     <div class="content">
         <div class="login-form">
             <svg width="200" height="200" style="margin-bottom: 10%;" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -27,4 +35,7 @@
 
 
     </div>
+    </body>
+
+
     {%endblock content%}

@@ -1,14 +1,48 @@
-{%extends 'base.html'%}
-{%load static%}
-{%block content%}
-
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<body style="text-align: center;">
     <div>
-        <h1>Storefront Page </h1>
-    </div>
-    <ul class="navbar">
-            <li style="float: right;"><a href="{%url 'logout'%}">Logout</a></li>
-            {% for team in teams%}
-            <li><a href="{%url "detail" }">{{}}</a></li>
-            {%endfor%}
+        <ul class="navbar">
+            <li><a href="#">Drinks</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">All</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        <div class=" flex-boba3">
+            <li class="boba-layer3" style="color: #644117">⬤</li>
+            <li class="boba-layer3" style="color: #644117">⬤</li>
+            <li class="boba-layer3" style="color: #644117">⬤</li>
+            <li class="boba-layer3" style="color: #644117">⬤</li>
+            <li class="boba-layer3" style="color: #644117">⬤</li>
+        </div>
+        <div class=" flex-boba2">
+            <li class="boba-layer2" style="color: #644117">⬤</li>
+            <li class="boba-layer2" style="color: #644117">⬤</li>
+            <li class="boba-layer2" style="color: #644117">⬤</li>
+            <li class="boba-layer2" style="color: #644117">⬤</li>
+            <li class="boba-layer2" style="color: #644117">⬤</li>
+        </div>
+        <div class="flex-boba">
+            <li class="boba-layer1" style="color: #644117">⬤</li>
+            <li class="boba-layer1" style="color: #644117">⬤</li>
+            <li class="boba-layer1" style="color: #644117">⬤</li>
+            <li class="boba-layer1" style="color: #644117">⬤</li>
+            <li class="boba-layer1" style="color: #644117">⬤</li>
+
+            
+        </div>
+
+            </div>
         </ul>
-{%endblock content%}
+    </div>
+
+    <h1 class="company">The Daily Brew</h1>
+    
+    <div class="items">
+        {% for item in items%}
+            <div class="item-box" id="item-box">
+                <div class="item-box-inner">{{item}}</div><div class="item-desc" id="item-desc">{{item.description}}</div></div>
+        {% endfor %}
+    </div>
+</body>
+{% endblock content %}

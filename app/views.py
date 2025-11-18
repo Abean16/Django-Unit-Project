@@ -3,11 +3,16 @@ from django.http.response import HttpResponse
 from django.http.request import HttpRequest
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from .models import Items
+
+
 
 # Create your views here.
 
-def storefront_page(request:HttpRequest)-> HttpResponse:
-    return render(request, "storefront.html")
+def storefront_page(request:HttpRequest):
+    store_items = Items.objects.all()
+    context = {'items': store_items}
+    return render(request, "storefront.html", context)
 
 def register_view(request):
     if request.method == "POST":
@@ -55,3 +60,6 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+
+

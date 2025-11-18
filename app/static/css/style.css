@@ -43,11 +43,14 @@ body{
     font-size: 22px;
 }
 
-
 input:-webkit-autofill {
     box-shadow: 0 0 0 1000px #a6b37d inset !important;
     -webkit-text-fill-color: #000 !important;
     border: 2px solid black;
+}
+
+.input::placeholder{
+    color:#fefae0;
 }
 
 

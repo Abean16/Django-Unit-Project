@@ -5,5 +5,10 @@
     <div>
         <h1>Storefront Page </h1>
     </div>
-    <a href="{%url 'logout'%}">Logout</a>
+    <ul class="navbar">
+            <li style="float: right;"><a href="{%url 'logout'%}">Logout</a></li>
+            {% for team in teams%}
+            <li><a href="{%url "detail" }">{{}}</a></li>
+            {%endfor%}
+        </ul>
 {%endblock content%}

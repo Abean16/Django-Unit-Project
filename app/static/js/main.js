@@ -1,6 +1,7 @@
 const boxes = document.querySelectorAll('.item-box');
-const descs = document.getElementsByClassName('.item-desc');
-const button = document.getElementById('button')
+const descs = document.querySelectorAll('.item-desc');
+const desc = document.getElementById('item-desc');
+const button = document.getElementById('button');
 
 for (let i = 0; i < boxes.length; i++) {
     const currentBox = boxes[i];
@@ -19,15 +20,18 @@ for (let i = 0; i < boxes.length; i++) {
 
 
 button.addEventListener("click", function(){
-    for (let i = 0; i < boxes.length; i++) {
-    const currentBox = boxes[i];
-        descs.style.display = "block"
+    if(desc.style.display = "none"){
+        desc.style.display = "block" }
+    else if(desc.style.display = "block"){
+        desc.style.display = "none"
+    }
+
 })
 
 
 for (let i = 0; i < descs.length; i++) {
     const currentDesc = descs[i];
-        currentDesc.addEventListener("mouseenter", function(){
+        boxes.addEventListener("mouseenter", function(){
             currentDesc.style.display == "block";
             currentDesc.style.color = "aqua"
             currentDesc.style.backgroundColor = "aqua"

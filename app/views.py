@@ -7,7 +7,7 @@ from .models import Items
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 import stripe
-from .forms import *
+from .forms import QuantityForm
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -30,19 +30,19 @@ def pricing_view(request, product_id):
         if form.is_valid():
             quantity = form.cleaned_data['quantity']
             return render(request,'pricing.html',{'item': store_items,
-                                                  'form': form,
-                                                  'quantity': quantity,
-                                                  })
+                                                'form': form,
+                                                'quantity': quantity,
+                                                })
         else:
             return render(request, 'pricing.html',{'item': store_items,
-                                                   'form': form,
-                                                   })
+                                                'form': form,
+                                                })
     else:
         form = QuantityForm()
 
     return render(request,'pricing.html',{'item': store_items,
-                                          'form': form,
-                                          })
+                                        'form': form,
+                                        })
 
 
 def register_view(request):

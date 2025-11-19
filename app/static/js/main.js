@@ -1,49 +1,26 @@
 const boxes = document.querySelectorAll('.item-box');
 const descs = document.querySelectorAll('.item-desc');
-const desc = document.getElementById('item-desc');
-const button = document.getElementById('button2');
 
-for (let i = 0; i < boxes.length; i++) {
+for (let i = 0; i < boxes.length; i++){
     const currentBox = boxes[i];
-        currentBox.addEventListener("mouseenter", function(){
-            currentBox.style.paddingBottom = "20%";
-            currentBox.style.transform = "scaleY(1.0)";
-            currentBox.style.transition = "1s";
-            for (let i = 0; i < descs.length; i++) {
-                const currentDesc = descs[i];
-                    currentDesc.style.display == "block";
-                    currentDesc.style.color = "aqua"
-                    currentDesc.style.backgroundColor = "black"
-        })
-        currentBox.addEventListener("mouseleave", function(){
-            setTimeout(() => {
-                currentBox.style.paddingBottom = "1%";
-                currentBox.style.display == "none";
-                currentDesc.style.display == "none";
-            }, 500);
-        })
+    const currentDesc = descs[i];   
+
+    currentBox.addEventListener("mouseenter", function(){
+        currentBox.style.paddingBottom = "20%";
+        currentBox.style.transform = "scaleY(1.0)";
+        currentBox.style.transition = "1s";
+
+        currentDesc.style.display = "block";  
+        currentDesc.style.color = "aqua";
+        currentDesc.style.backgroundColor = "black";
+    });
+
+    currentBox.addEventListener("mouseleave", function(){
+        setTimeout(() => {
+            currentBox.style.paddingBottom = "1%";
+            currentDesc.style.display = "none"; 
+            currentDesc.style.color = "yellow";
+        }, 100);
+    });
 }
 
-
-button.addEventListener("click", function(){
-    if(desc.style.display = "none"){
-        desc.style.display = "block" }
-    else if(desc.style.display = "block"){
-        desc.style.display = "none"
-    }
-})
-
-
-for (let i = 0; i < descs.length; i++) {
-    const currentDesc = descs[i];
-        boxes.addEventListener("mouseenter", function(){
-            currentDesc.style.display == "block";
-            currentDesc.style.color = "aqua"
-            currentDesc.style.backgroundColor = "aqua"
-        })
-        currentDesc.addEventListener("mouseleave", function(){
-            setTimeout(() => {
-                currentDesc.style.display == "none";
-            }, 500);
-        })
-}

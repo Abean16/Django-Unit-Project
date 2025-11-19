@@ -203,10 +203,7 @@ input:-webkit-autofill {
     padding-bottom:1%;
 
 }
-.item-box:hover{
-    background-color: #b99470;
 
-}
 .item-box-inner{
     display: flex;
     justify-content: center;

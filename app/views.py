@@ -7,20 +7,40 @@ from .models import Items
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 import stripe
+from .forms import *
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 # Create your views here.
 
-def storefront_page(request:HttpRequest):
+def storefront_page(request):
     store_items = Items.objects.all()
     context = {'items': store_items}
     return render(request, "storefront.html", context)
 
-def pricing_view(request, product_id):  
+def pricing_view(request, product_id): 
     store_items = Items.objects.get(id=product_id)
-    context = {'item': store_items}
-    return render(request, 'pricing.html', context)
+
+    if request.method == "POST":
+        form = QuantityForm(request.POST)
+
+        if form.is_valid():
+            quantity = form.cleaned_data['quantity']
+            return render(request,'pricing.html',{'item': store_items,
+                                                  'form': form,
+                                                  'quantity': quantity,
+                                                  })
+        else:
+            return render(request, 'pricing.html',{'item': store_items,
+                                                   'form': form,
+                                                   })
+    else:
+        form = QuantityForm()
+
+    return render(request,'pricing.html',{'item': store_items,
+                                          'form': form,
+                                          })
+
 
 def register_view(request):
     if request.method == "POST":
@@ -70,7 +90,7 @@ def logout_view(request):
     return redirect('login')
 
 @login_required
-def CreateCheckoutSessionView(request, product_id):
+def CreateCheckoutSessionView(request, product_id, quantity):
     product = Items.objects.get(id=product_id)
 
     YOUR_DOMAIN = f"{request.scheme}://{request.get_host()}"
@@ -81,13 +101,13 @@ def CreateCheckoutSessionView(request, product_id):
             {
                 'price_data': {
                     'currency': 'usd',
-                    'unit_amount': product.price * 100,
+                    'unit_amount': int(product.price * 100) ,
                     'product_data': {
                         'name': product.name,
                         'images': [product.image]
                     },
                 },
-                'quantity': 1,
+                'quantity': quantity,
             },
         ],
         metadata = {
@@ -107,13 +127,13 @@ def payment_succesful(request, product_id):
 
     product = Items.objects.get(id=product_id)
 
-    return render(request, 'payment-success.html', {'product': product})
+    return render(request, 'payment-success.html', {'item': product})
 
 def payment_failed(request, product_id):
 
     product = Items.objects.get(id=product_id)
 
-    return render(request, 'payment-failed.html', {'product': product})
+    return render(request, 'payment-failed.html', {'item': product})
 
 
 

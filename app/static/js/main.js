@@ -22,6 +22,7 @@ button.addEventListener("click", function(){
     for (let i = 0; i < boxes.length; i++) {
     const currentBox = boxes[i];
         descs.style.display = "block"
+    }
 })
 
 

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <p>{{ item.name }}</p>
+    <p>${{ item.price }} Each</p>
+    <p>{{ item.description }}</p>
+    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+
+    <form action="{% url 'pricing' item.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Quantity</button>
+    </form>
+
+    {% if quantity %}
+        <p>Selected quantity: {{ quantity }}</p>
+        <a href="{% url 'checkout' item.id quantity %}">
+            <button>Proceed to Checkout</button>
+        </a>
+    {% endif %}
+
+{% endblock content %}

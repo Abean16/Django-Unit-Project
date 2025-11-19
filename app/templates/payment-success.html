@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <p>Your order for {{ item.name }} was success.</p>
+    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+{% endblock content %}

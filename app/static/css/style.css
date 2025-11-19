@@ -220,7 +220,7 @@ input:-webkit-autofill {
     font-size: 30px;
 }
 
-#item-desc{
+.item-desc{
     display: none;
 }
 
@@ -241,7 +241,7 @@ input:-webkit-autofill {
 
 }
 
-.boba-layer1,.boba-layer2,.boba-layer3 svg hover {
+.boba-layer1,.boba-layer2,.boba-layer3 hover {
             animation: gelatine .5s infinite;
 }
 @keyframes gelatine {

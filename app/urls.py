@@ -5,7 +5,8 @@ from app.views import login_view,storefront_page, register_view,logout_view
 
 urlpatterns = [
     path('', login_view, name="login"),
-    path('storefront/', storefront_page, name = "storefront"),
+    path('storefront/', storefront_page, {'page_filter': None}, name='storefront'),
+    path('storefront/<str:page_filter>/', storefront_page, name='storefront_filtered'),
     path('register/', register_view, name = "register"),
     path('logout/', logout_view, name="logout"),
     path('payment-success/<int:product_id>/', payment_succesful, name='payment-success'),

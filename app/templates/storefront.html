@@ -4,9 +4,9 @@
 <body style="text-align: center;">
     <div>
         <ul class="navbar">
-            <li><a href="#">Drinks</a></li>
-            <li><a href="#">Food</a></li>
-            <li><a href="#">All</a></li>
+            <li><a href="{% url 'storefront_filtered' 'drink' %}">Drinks</a></li>
+            <li><a href="{% url 'storefront_filtered' 'food' %}">Food</a></li>
+            <li><a href="{% url 'storefront' %}">All</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
         <div class=" flex-boba3">
             <li class="boba-layer3" style="color: #644117">⬤</li>

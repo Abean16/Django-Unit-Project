@@ -13,8 +13,11 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 # Create your views here.
 
-def storefront_page(request):
-    store_items = Items.objects.all()
+def storefront_page(request, page_filter):
+    if page_filter in ['drink', 'food']:
+        store_items = Items.objects.filter(category=page_filter)
+    else:
+        store_items = Items.objects.all()
     context = {'items': store_items}
     return render(request, "storefront.html", context)
 

@@ -131,7 +131,12 @@ input:-webkit-autofill {
     text-decoration: none;
     text-align: center;
     font-family: rubik bubbles, sans-serif
+}
 
+.navbar li a:hover {
+    background-color: #fefae0;
+    color: #b99470;
+    border-radius: 10px;
 }
 
 .flex-boba {
@@ -170,13 +175,6 @@ input:-webkit-autofill {
     margin: -13px;
 }
 
-.navbar li a:hover {
-    background-color: #fefae0;
-    color: #b99470;
-    border-radius: 10px;
-}
-
-
 
 .items{
     margin-top: 10%;
@@ -186,12 +184,10 @@ input:-webkit-autofill {
     margin-left: 20%;
 }
 
-
 .item-box{
     padding-left: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: #b99470;
     border-style: solid;
     border-radius: 10px;
@@ -201,7 +197,6 @@ input:-webkit-autofill {
     padding-top: 4%;
     font-size: 30px;
     padding-bottom:1%;
-
 }
 
 .item-box-inner{
@@ -210,7 +205,7 @@ input:-webkit-autofill {
     background-color: #a6b37d;
     border-style: solid;
     border-radius: 10px;
-    width: 230px;
+    width: 95%;
     height: 160px;
     border: black;
     padding-top: 5%;
@@ -219,22 +214,22 @@ input:-webkit-autofill {
 
 .item-desc{
     display: none;
+    flex-direction: column;
+    align-content: center;
+    margin: 5%;
 }
 
+#button{
+    color: black;
+    width: 50%;
+    align-self: center;
+}
 
-.login{
-    background-color: #a6b37d;
-    width: 15vh;
-    height: 5vh;
-    font-weight: bold;
-    border: #a6b37d;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 30px;
-    font-weight:400;
-    margin-bottom: 5%;
-    font-family: rubik bubbles, sans-serif;
-    font-size:15px;
+#button:active{
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    transform: scale(0.98);
+    font-family: rubik bubbles, sans-serif
 
 }
 

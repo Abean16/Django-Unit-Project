@@ -10,16 +10,14 @@ for (let i = 0; i < boxes.length; i++){
         currentBox.style.transform = "scaleY(1.0)";
         currentBox.style.transition = "1s";
 
-        currentDesc.style.display = "block";  
+        currentDesc.style.display = "flex";  
         currentDesc.style.color = "aqua";
-        currentDesc.style.backgroundColor = "black";
     });
 
     currentBox.addEventListener("mouseleave", function(){
         setTimeout(() => {
             currentBox.style.paddingBottom = "1%";
             currentDesc.style.display = "none"; 
-            currentDesc.style.color = "yellow";
         }, 100);
     });
 }

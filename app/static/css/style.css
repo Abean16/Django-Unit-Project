@@ -4,13 +4,14 @@
 body{
     background-color: hsl(52, 94%, 94%);
 }
+
 .company{
     font-family: 'Rubik Bubbles', cursive;
     text-align: center;
     font-size: 40px;
     color: #a6b37d;
- }
- 
+}
+
 .content{
     background-color: #b99470;
     margin: 4%;
@@ -143,21 +144,26 @@ input:-webkit-autofill {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: -5px;
+    margin-top: -15px;
+    margin-left: 50px;
+    margin-bottom: -20px;
+
 }
 .flex-boba2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: -3px;
-
+    margin-bottom: 23px;
+    margin-left: 50px;
+    margin-top: -3px;
 }
 .flex-boba3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top:209px;
-    margin-bottom: -8px;
+    margin-top:530px;
+    margin-bottom: 10px;
+    margin-left: 50px;
 }
 .boba-layer1 {
     font-size: 40px;
@@ -206,10 +212,11 @@ input:-webkit-autofill {
     border-style: solid;
     border-radius: 10px;
     width: 95%;
-    height: 160px;
+    height: 140px;
     border: black;
     padding-top: 5%;
     font-size: 30px;
+    padding: 0;
 }
 
 .item-desc{
@@ -217,12 +224,36 @@ input:-webkit-autofill {
     flex-direction: column;
     align-content: center;
     margin: 5%;
+    font-size: 22px;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 #button{
     color: black;
-    width: 50%;
+    width: 45%;
+    height: 25%;
     align-self: center;
+    font-size: 12px;
+    background-color: #a6b37d;
+    border: #000000;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    font-weight:100;
+    font-family: rubik bubbles, sans-serif;
+    margin-top: 5%;
+}
+
+#button a{
+    color: #fefae0;
+    padding-bottom: 80%;
+}
+
+#button a:hover{
+    text-decoration: underline;
 }
 
 #button:active{
@@ -230,11 +261,38 @@ input:-webkit-autofill {
     -webkit-transition: all 0.25s;
     transform: scale(0.98);
     font-family: rubik bubbles, sans-serif
-
 }
 
-.boba-layer1,.boba-layer2,.boba-layer3 hover {
-            animation: gelatine .5s infinite;
+
+.price-page{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+.price-content{
+    background-color: #b99470;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 80vh;
+}
+
+.back-button{
+    color:#fefae0
+}
+
+.back-button:hover{
+    text-decoration: underline;
+}
+
+.boba-layer1:hover, .boba-layer2:hover, .boba-layer3:hover {
+    animation: gelatine .7s;
+    animation-fill-mode: both;
 }
 @keyframes gelatine {
 

@@ -327,3 +327,29 @@ input:-webkit-autofill {
                 transform: scale(.95, 1.05) rotate(-6deg);
             }
         }
+
+
+.success-fail-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-body {
+    align-items: center;
+    margin-top: 1%;
+    font-size: 20px;
+    font-family: rubik bubbles, sans-serif;
+    color: #fefae0;
+}
+
+.success-body2 {
+    background-color: #b99470;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 95vh;
+}

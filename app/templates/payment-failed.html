@@ -1,7 +1,14 @@
-{% extends 'base.html' %}
+{% extends 'success_fail_base.html' %}
 {% load static %}
 
 {% block content %}
-    <p>Your order for {{ item.name }} failed.</p>
-    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+    <div class="success-body"></div>
+        <div class="success-body2">
+                    <a class="back-button" href="{% url 'storefront' %}">Return to Store Front</a>
+                    <h1>Your purchase for {{ item.name }} failed.</h1>
+                    <p>${{ item.price }} Each</p>
+                    <p>{{ item.description }}</p>
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}" style="width: 200px; height: 200px;">
+        </div>
+    </div>
 {% endblock content %}

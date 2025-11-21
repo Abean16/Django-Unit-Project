@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
+<div class="price-page">
+    <div class="price-content">
+        <a class="back-button" href="{% url 'storefront' %}">Return to Store Front</a>
+        <h1>{{ item.name }}</h1>
+        <p>${{ item.price }} Each</p>
+        <p>{{ item.description }}</p>
+        <img src="{{ item.image.url }}" alt="{{ item.name }}" style="width: 200px; height: 200px;">
 
-    <p>{{ item.name }}</p>
-    <p>${{ item.price }} Each</p>
-    <p>{{ item.description }}</p>
-    <img src="{{ item.image.url }}" alt="{{ item.name }}">
+        <form action="{% url 'pricing' item.id %}" method="post" style="display:flex; flex-direction:column; justify-content: center;">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="button" style="margin-left:15%;">Submit</button>
+        </form>
 
-    <form action="{% url 'pricing' item.id %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit Quantity</button>
-    </form>
-
-    {% if quantity %}
-        <p>Selected quantity: {{ quantity }}</p>
-        <a href="{% url 'checkout' item.id quantity %}">
-            <button>Proceed to Checkout</button>
-        </a>
-    {% endif %}
-
+        {% if quantity %}
+            <p>Selected quantity: {{ quantity }}</p>
+            <a href="{% url 'checkout' item.id quantity %}">
+                <button>Proceed to Checkout</button>
+            </a>
+        {% endif %}
+    </div>
+</div>
 {% endblock content %}

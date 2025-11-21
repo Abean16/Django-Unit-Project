@@ -9,10 +9,10 @@
         <p>{{ item.description }}</p>
         <img src="{{ item.image.url }}" alt="{{ item.name }}" style="width: 200px; height: 200px;">
 
-        <form action="{% url 'pricing' item.id %}" method="post">
+        <form action="{% url 'pricing' item.id %}" method="post" style="display:flex; flex-direction:column; justify-content: center;">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="button">Submit</button>
+            <button type="submit" class="button" style="margin-left:15%;">Submit</button>
         </form>
 
         {% if quantity %}

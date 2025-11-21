@@ -116,7 +116,6 @@ input:-webkit-autofill {
     background-color: #b99470;
     border-radius: 40px;
     position: fixed;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -267,7 +266,10 @@ input:-webkit-autofill {
 .price-page{
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 1%;
+    font-size: 20px;
+    font-family: rubik bubbles, sans-serif;
+    color: #fefae0;
 }
 
 
@@ -279,16 +281,28 @@ input:-webkit-autofill {
     justify-content: center;
     align-items: center;
     width: 100vh;
-    height: 80vh;
+    height: 95vh;
 }
 
 .back-button{
-    color:#fefae0
+    color:#fefae0;
+    font-size: 22px;
 }
 
 .back-button:hover{
     text-decoration: underline;
 }
+
+#id_quantity{
+    height: 4vh;
+    width: 15vh;
+    background-color: #fefae0;
+    border-style: none;
+    border-radius: 40px;
+    font-size: large;
+}
+
+
 
 .boba-layer1:hover, .boba-layer2:hover, .boba-layer3:hover {
     animation: gelatine .7s;

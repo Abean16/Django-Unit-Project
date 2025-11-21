@@ -40,7 +40,6 @@
         {% for item in items%}
             <div class="item-box" id="item-box">
                 <div class="item-box-inner" id="item-box-inner">
-                    <img src="{{ item.image.url }}" alt="{{ item.name }}" style="width:80%; height:140px; top: 5%;">
                     </div>
                 <div class="item-desc" id="item-desc">{{item.name}}
                     <button id="button"><a href="{% url 'pricing' item.id %}">Details</a></button>

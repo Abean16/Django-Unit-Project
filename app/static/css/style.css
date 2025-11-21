@@ -11,11 +11,11 @@ body{
     font-family: 'Rubik Bubbles', cursive;
     text-align: center;
     font-size: 40px;
-    color: #a6b37d;
+    color: #4f371f;
 }
 
 .content{
-    background-color: #b99470;
+    background-color: #4f371f;
     margin: 4%;
     padding: 4%;
     display: flex;
@@ -51,7 +51,7 @@ body{
     background-color: #a6b37d;
     width: 80vh;
     height: 5vh;
-    color: #fefae0;
+    color: #fff8e7;
     border-radius: 40px;
     padding: 10px;
     margin-bottom: 80%;
@@ -65,7 +65,7 @@ body{
 
 input:-webkit-autofill {
     box-shadow: 0 0 0 1000px #a6b37d inset !important;
-    -webkit-text-fill-color:  #fefae0 !important;
+    -webkit-text-fill-color:  #fff8e7 !important;
     border: 2px solid #a6b37d !important;
     font-family: "Chewy", system-ui;
     font-weight: 400;
@@ -73,7 +73,7 @@ input:-webkit-autofill {
 }
 
 .input::placeholder{
-    color:#fefae0;
+    color:#fff8e7;
     font-family: "Chewy", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -84,7 +84,7 @@ input:-webkit-autofill {
     background-color: #a6b37d;
     width: 20vh;
     height: 5vh;
-    color: #fefae0;
+    color: #fff8e7;
     font-weight: bold;
     border: #a6b37d;
     border-width: 1px;
@@ -129,7 +129,7 @@ input:-webkit-autofill {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #b99470;
+    background-color: #4f371f;
     border-radius: 40px;
     position: fixed;
     display: flex;
@@ -142,7 +142,7 @@ input:-webkit-autofill {
 
 .navbar li, a {
     display: block;
-    color: #fefae0;
+    color: #fff8e7;
     padding: 8px 16px;
     text-decoration: none;
     text-align: center;
@@ -153,8 +153,8 @@ input:-webkit-autofill {
 }
 
 .navbar li a:hover {
-    background-color: #fefae0;
-    color: #b99470;
+    background-color: #fff8e7;
+    color: #4f371f;
     border-radius: 10px;
 }
 
@@ -209,7 +209,7 @@ input:-webkit-autofill {
     padding-left: 5%;
     display: flex;
     flex-direction: column;
-    background-color: #b99470;
+    background-color: #4f371f;
     border-style: solid;
     border-radius: 10px;
     width: 250px;
@@ -267,7 +267,7 @@ input:-webkit-autofill {
 }
 
 #button a{
-    color: #fefae0;
+    color: #fff8e7;
     padding-bottom: 80%;
 }
 
@@ -293,24 +293,29 @@ input:-webkit-autofill {
     font-family: "Chewy", system-ui;
     font-weight: 400;
     font-style: normal;
-    color: #fefae0;
+    color: #fff8e7;
 }
 
 
 .price-content{
-    background-color: #b99470;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background-color: #4f371f;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
     justify-content: center;
     align-items: center;
     width: 100vh;
-    height: 100vh;
+    height: 85vh;
+    gap: 0;
 }
 
 .back-button{
     color:#a6b37d;
-    font-size: 22px;
+    font-size: 40px;
+    background-color: #fff8e7;
+    border-radius: 40px;
 }
 
 .back-button:hover{
@@ -320,7 +325,7 @@ input:-webkit-autofill {
 #id_quantity{
     height: 4vh;
     width: 15vh;
-    background-color: #fefae0;
+    background-color: #fff8e7;
     border-style: none;
     border-radius: 40px;
     font-size: large;
@@ -330,14 +335,14 @@ input:-webkit-autofill {
     background-color: #a6b37d;
     width: 20vh;
     height: 5vh;
-    color: #fefae0;
+    color: #fff8e7;
     font-weight: bold;
     border: #a6b37d;
     border-width: 1px;
     border-style: solid;
     border-radius: 30px;
     margin-bottom: 5%;
-    font-size:12px;
+    font-size:14px;
     font-family: "Chewy", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -381,11 +386,11 @@ input:-webkit-autofill {
     margin-top: 1%;
     font-size: 20px;
     font-family: rubik bubbles, sans-serif;
-    color: #fefae0;
+    color: #fff8e7;
 }
 
 .success-body2 {
-    background-color: #b99470;
+    background-color: #4f371f;
     display: flex;
     flex-direction: column;
     border-radius: 40px;

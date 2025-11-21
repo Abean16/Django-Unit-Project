@@ -4,7 +4,7 @@
 <div class="price-page">
     <div class="price-content">
         <a class="back-button" href="{% url 'storefront' %}">Return to Store Front</a>
-        <h1>{{ item.name }}</h1>
+        <h2>{{ item.name }}</h2>
         <p>${{ item.price }} Each</p>
         <p>{{ item.description }}</p>
         <img src="{{ item.image.url }}" alt="{{ item.name }}" style="width: 200px; height: 200px;">
@@ -18,7 +18,7 @@
         {% if quantity %}
             <p>Selected quantity: {{ quantity }}</p>
             <a href="{% url 'checkout' item.id quantity %}">
-                <button>Proceed to Checkout</button>
+                <button class="button2">Proceed to Checkout</button>
             </a>
         {% endif %}
     </div>

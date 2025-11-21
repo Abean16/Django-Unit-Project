@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
 
 body{
     background-color: hsl(52, 94%, 94%);
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .company{
@@ -26,7 +28,9 @@ body{
 .login-form{
     display: flex;
     align-items: center;
-    font-family: rubik bubbles, sans-serif;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
     flex-direction: column;
 }
 
@@ -36,7 +40,9 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: rubik bubbles, sans-serif;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
     width: 5vh;
 }
 
@@ -52,20 +58,25 @@ body{
     border: 3px #a6b37d;
     border-style: solid;
     font-size: 22px;
-    font-family: rubik bubbles;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 input:-webkit-autofill {
     box-shadow: 0 0 0 1000px #a6b37d inset !important;
     -webkit-text-fill-color:  #fefae0 !important;
     border: 2px solid #a6b37d !important;
-    font-family: rubik bubbles, sans-serif
-
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .input::placeholder{
     color:#fefae0;
-    font-family: rubik bubbles;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -82,7 +93,9 @@ input:-webkit-autofill {
     font-weight:400;
     margin-bottom: 5%;
     font-size:22px;
-    font-family: rubik bubbles, sans-serif
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 .button:hover{
     text-decoration: underline;
@@ -92,20 +105,23 @@ input:-webkit-autofill {
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
     transform: scale(0.98);
-    font-family: rubik bubbles, sans-serif
-
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .link{
     text-decoration: none;
-    font-family: rubik bubbles, sans-serif
-
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .link:hover{
     text-decoration: underline;
-    font-family: rubik bubbles, sans-serif
-
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .navbar {
@@ -130,7 +146,10 @@ input:-webkit-autofill {
     padding: 8px 16px;
     text-decoration: none;
     text-align: center;
-    font-family: rubik bubbles, sans-serif
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
 }
 
 .navbar li a:hover {
@@ -166,17 +185,14 @@ input:-webkit-autofill {
 }
 .boba-layer1 {
     font-size: 40px;
-    font-family: 'Rubik Bubbles', cursive;
     margin: -13px;
 }
 .boba-layer2 {
     font-size: 40px;
-    font-family: 'Rubik Bubbles', cursive;
     margin: -10px;
 }
 .boba-layer3 {
     font-size: 40px;
-    font-family: 'Rubik Bubbles', cursive;
     margin: -13px;
 }
 
@@ -231,6 +247,7 @@ input:-webkit-autofill {
 }
 
 #button{
+    padding: 0;
     color: black;
     width: 45%;
     height: 25%;
@@ -242,7 +259,9 @@ input:-webkit-autofill {
     border-style: solid;
     border-radius: 30px;
     font-weight:100;
-    font-family: rubik bubbles, sans-serif;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
     margin-top: 5%;
 }
 
@@ -259,7 +278,9 @@ input:-webkit-autofill {
     transition: all 0.25s;
     -webkit-transition: all 0.25s;
     transform: scale(0.98);
-    font-family: rubik bubbles, sans-serif
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -268,7 +289,9 @@ input:-webkit-autofill {
     justify-content: center;
     margin-top: 1%;
     font-size: 20px;
-    font-family: rubik bubbles, sans-serif;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
     color: #fefae0;
 }
 
@@ -281,11 +304,11 @@ input:-webkit-autofill {
     justify-content: center;
     align-items: center;
     width: 100vh;
-    height: 95vh;
+    height: 100vh;
 }
 
 .back-button{
-    color:#fefae0;
+    color:#a6b37d;
     font-size: 22px;
 }
 
@@ -300,6 +323,23 @@ input:-webkit-autofill {
     border-style: none;
     border-radius: 40px;
     font-size: large;
+}
+
+.button2{
+    background-color: #a6b37d;
+    width: 20vh;
+    height: 5vh;
+    color: #fefae0;
+    font-weight: bold;
+    border: #a6b37d;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    font-size:12px;
+    font-family: "Chewy", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 

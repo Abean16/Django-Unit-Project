@@ -130,7 +130,7 @@ input:-webkit-autofill {
     padding: 0;
     width: 200px;
     background-color: #4f371f;
-    border-radius: 40px;
+    border-radius: 0 40px 40px;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -138,6 +138,7 @@ input:-webkit-autofill {
     padding-top: 5%;
     top: 0%;
     left: 0%;
+    
 }
 
 .navbar li, a {
@@ -241,6 +242,15 @@ input:-webkit-autofill {
     margin: 5%;
     font-size: 22px;
 }
+
+.item-image{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -250,9 +260,9 @@ input:-webkit-autofill {
     padding: 0;
     color: black;
     width: 45%;
-    height: 25%;
+    height: 20%;
     align-self: center;
-    font-size: 12px;
+    font-size: 10px;
     background-color: #a6b37d;
     border: #000000;
     border-width: 1px;
@@ -260,10 +270,11 @@ input:-webkit-autofill {
     border-radius: 30px;
     font-weight:100;
     font-family: "Chewy", system-ui;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     margin-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 12%;
+
 }
 
 #button a{
@@ -298,23 +309,23 @@ input:-webkit-autofill {
 
 
 .price-content{
-    padding-top: 5%;
-    padding-bottom: 2%;
+    padding: 8%;
     background-color: #4f371f;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
     justify-content: center;
     align-items: center;
-    width: 100vh;
+    width: 90vh;
     height: 85vh;
     gap: 0;
+
 }
 
 .back-button{
-    color:#a6b37d;
+    color:#fff8e7;
     font-size: 40px;
-    background-color: #fff8e7;
+    background-color: #a6b37d;
     border-radius: 40px;
 }
 

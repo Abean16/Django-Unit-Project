@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<body style="text-align: center;">
+<body style="text-align: center; margin-bottom: 20%;">
     <div>
         <ul class="navbar">
             <li><a href="{% url 'storefront_filtered' 'drink' %}">Drinks</a></li>
@@ -38,12 +38,13 @@
     
     <div class="items">
         {% for item in items%}
-            <div class="item-box" id="item-box">
-                <div class="item-box-inner" id="item-box-inner">
-                    </div>
-                <div class="item-desc" id="item-desc">{{item.name}}
-                    <button id="button"><a href="{% url 'pricing' item.id %}">Details</a></button>
+            <div class="item-box" >
+                <div class="item-box-inner">
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}" class="item-image">
                 </div>
+                    <div class="item-desc">{{item.name}}
+                        <button id="button"><a href="{% url 'pricing' item.id %}">Details</a></button>
+                    </div>
             </div>
         {% endfor %}
     </div>

@@ -138,7 +138,6 @@ input:-webkit-autofill {
     padding-top: 5%;
     top: 0%;
     left: 0%;
-    
 }
 
 .navbar li, a {
@@ -157,6 +156,19 @@ input:-webkit-autofill {
     background-color: #fff8e7;
     color: #4f371f;
     border-radius: 10px;
+    transition: color 0.5s, opacity 0.3s;
+}
+
+.navbar li a:active{
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    transform: scale(0.98);
+}
+
+#logout{
+    margin: 150% 0;
+    text-decoration: underline;
+
 }
 
 .flex-boba {
@@ -241,6 +253,7 @@ input:-webkit-autofill {
     align-content: center;
     margin: 5%;
     font-size: 22px;
+    color: #fff8e7;
 }
 
 .item-image{
@@ -260,9 +273,8 @@ input:-webkit-autofill {
     padding: 0;
     color: black;
     width: 45%;
-    height: 20%;
+    height: 15%;
     align-self: center;
-    font-size: 10px;
     background-color: #a6b37d;
     border: #000000;
     border-width: 1px;
@@ -270,20 +282,21 @@ input:-webkit-autofill {
     border-radius: 30px;
     font-weight:100;
     font-family: "Chewy", system-ui;
-    font-weight: 200;
     font-style: normal;
     margin-top: 5%;
-    padding-bottom: 12%;
-
+    padding-bottom: 15%;
 }
 
 #button a{
     color: #fff8e7;
-    padding-bottom: 80%;
+    font-size: 16px;
 }
 
 #button a:hover{
     text-decoration: underline;
+    color: #4f371f;
+    transition: color 0.3s, opacity 0.3s;
+
 }
 
 #button:active{
@@ -327,10 +340,13 @@ input:-webkit-autofill {
     font-size: 40px;
     background-color: #a6b37d;
     border-radius: 40px;
+    text-decoration: underline;
+
 }
 
 .back-button:hover{
-    text-decoration: underline;
+    color: #4f371f ;
+    transition: color 0.3s, opacity 0.3s;
 }
 
 #id_quantity{
@@ -409,4 +425,100 @@ input:-webkit-autofill {
     align-items: center;
     width: 100vh;
     height: 95vh;
+}
+
+@media screen and (min-width: 430px) and (max-width: 932px)
+{
+    body{
+        text-align: center;
+    }
+
+    .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5%;
+        flex-direction: row;
+        width: 100%;
+        border-radius: 0 0 40px 40px;
+        height: 5%;
+        position: fixed;
+        top: 0%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50%;
+    }
+
+    .navbar li, a {
+        font-size: 18px;
+        display: block;
+        text-decoration: none;
+    }
+    
+    .company{
+        padding-top: 10%;
+    }
+
+    .input{
+        width: 30vh;
+        height: 2vh;
+        margin-bottom: 50%;
+    }
+
+    .content{
+        margin-top: 10%;
+    }
+
+    .items{
+        margin-top: 10%;  
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+
+    .item-box{
+        width: 185px;
+        height: 150px;
+        padding-bottom: 35%;
+    }
+
+    .item-desc{
+        font-size: 16px;
+        display: flex;
+        margin-top: 5%;
+    }
+
+    #button{
+        width: 55%;
+        height: 2%;
+        padding-bottom: 15%;
+    }
+
+    #button a{
+        font-size: 12px;
+        padding: 5%;
+    }
+
+    .back-button{
+        font-size: 20px;
+        text-decoration: underline;
+        margin-top: 5%;
+    }
+
+    .price-content{
+        margin: 5%;
+        width: 80vh;
+        height: 100vh;
+        padding-bottom: 10%;
+        font-size: 18px;
+    }
+
+    .button2{
+        width: 20vh;
+        font-size:12px;
+    }
+
+    #logout{
+        margin: 0;
+        text-decoration: underline;
+    }
 }

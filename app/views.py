@@ -66,10 +66,9 @@ def register_view(request):
             email=email,
             password=password
         )
-
         return redirect("login")
-
     return render(request, "register.html")
+
 
 def login_view(request):
     if request.method == "POST":

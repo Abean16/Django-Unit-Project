@@ -5,10 +5,10 @@
     <div class="success-body"></div>
         <div class="success-body2">
                     <a class="back-button" href="{% url 'storefront' %}">Return to Store Front</a>
-                    <h1>Your purchase for {{ item.name }} failed.</h1>
+                    <h1 style="margin-top: 10%;">Your purchase for {{ item.name }} failed.</h1>
                     <p>${{ item.price }} Each</p>
                     <p>{{ item.description }}</p>
-                    <img src="{{ item.image.url }}" alt="{{ item.name }}" style="width: 200px; height: 200px;">
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}" style="width: 180px; height: 150px;">
         </div>
     </div>
 {% endblock content %}
